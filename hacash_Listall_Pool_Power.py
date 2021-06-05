@@ -2,7 +2,7 @@
 #+-----------------------------------------------------------------------------------------------------------------------------------------------+
 #| RE              : hacash_Listall_Pool_Power.py
 #|                   Displays the Hacash Pool Power for all known pools
-#| DATE			   : Jun-05-2021
+#| DATE            : Jun-05-2021
 #| NOTES           : Parses the pool explorer web page, extracting the [Period PoW Worth] for all clients, providing a summary of all clients
 #|                   The URL was obtained from [https://miningpoolstats.stream/hacash]
 #| KNOWN PROBLEMS  : N/A
