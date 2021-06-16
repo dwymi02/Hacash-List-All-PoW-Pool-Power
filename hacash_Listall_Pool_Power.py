@@ -9,6 +9,7 @@
 #|
 #| CHANGE LOG      : Version       Date                                              Description of code change
 #|                   -------    -----------    --------------------------------------------------------------------------------------------------
+#|                   0.1.2      Jun-16-2021    Added new pool to monitor, listed on [https://miningpoolstats.stream/hacash]
 #|                   0.1.1      Jun-12-2021    Added code to handle exceptions
 #|                   0.1.0      Jun-05-2021    Initial inception
 #+-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -24,7 +25,7 @@ from html_table_parser.parser import HTMLTableParser
 def url_get_contents(url):
 	""" Opens a website and read its binary contents (HTTP Response Body) """
 	req = urllib.request.Request(url=url)
-	f = urllib.request.urlopen(req)
+	f   = urllib.request.urlopen(req)
 
 	return f.read()
 
@@ -65,7 +66,14 @@ def sum_period_pow_worth(copylist):
 
 
 def main():
-	allhacpoolslist = ['http://95.165.168.191:3340', 'http://182.92.163.225:3340', 'http://3.101.62.234:3340', 'http://163.123.181.77:3340', 'http://104.217.254.247:3340', 'http://65.21.94.113:3340']
+	allhacpoolslist = [ 'http://95.165.168.191:3340',
+						'http://182.92.163.225:3340',
+						'http://3.101.62.234:3340',
+						'http://163.123.181.77:3340',
+						'http://104.217.254.247:3340',
+						'http://65.21.94.113:3340',
+						'http://54.178.84.72:3340'
+					  ]
 
 	try:
 		for urlitem in allhacpoolslist:
